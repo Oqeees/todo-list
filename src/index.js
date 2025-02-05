@@ -13,7 +13,7 @@ const App = () => {
         <div>
             {/*{ isLoggedIn ? null : loginBox }*/}
             { value }
-            <AppHeader />
+            < AppHeader />
             <SearchPanel />
             <TodoList/>
         </div>

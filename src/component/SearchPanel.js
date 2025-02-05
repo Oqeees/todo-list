@@ -1,6 +1,6 @@
 import React from "react";
 export const SearchPanel = () => {
-    const searchText = 'Type here to search';
+    const searchText = 'Type  here to search';
     const searchStyle = {
         fontSize: '20px'
     };
