@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import TodoList from "./component/TodoList";
 import SearchPanel from "./component/SearchPanel";
 import AppHeader from "./component/AppHeader";
+import ItemStatusFilter from "./component/ItemStatusFilter";
 
 const App = () => {
     const todoData = [
@@ -17,6 +18,7 @@ const App = () => {
             <AppHeader />
             <SearchPanel />
             <TodoList todos={todoData} />
+            <ItemStatusFilter />
         </div>
     );
 }
