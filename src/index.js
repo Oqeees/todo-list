@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
 
-//const element = React.createElement('hi', null, 'Hello React World');
 const TodoList = () => {
+    const items = ['Install React', 'Study Reac', 'Use React', 'Build React App'];
     return (
         <ul>
-            <li>Install React</li>
-            <li>Study React</li>
-            <li>Use React</li>
-            <li>Build React App</li>
+            <li>{items[0]}</li>
+            <li>{items[1]}</li>
+            <li>{items[2]}</li>
+            <li>{items[3]}</li>
         </ul>
     );
 };
@@ -18,12 +18,27 @@ const AppHeader = () =>{
 };
 
 const SearchPanel = () => {
-    return <input placeholder="search" />;
+
+    const searchText = 'Type here to search';
+    const searchStyle = {
+        fontSize: '20px'
+    };
+
+
+    return <input
+        style = {searchStyle}
+        placeholder= {searchText}
+        disabled={true} />;
 }
 
 const App = () => {
+
+    const value = '<script>alert ("")</script>';
+
     return (
         <div>
+            {/*{ isLoggedIn ? null : loginBox }*/}
+            { value }
             <AppHeader />
             <SearchPanel />
             <TodoList/>
@@ -31,7 +46,5 @@ const App = () => {
     );
 }
 
-// const element = <App />;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<App/>);
